@@ -22,10 +22,10 @@ namespace API.Extensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<LogUserActivity>();
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
-            services.AddDbContext<DataContext>(options =>
-            {
-                options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
-            });
+            // services.AddDbContext<DataContext>(options =>
+            // {
+            //     options.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+            // });
 
             return services;
         }
